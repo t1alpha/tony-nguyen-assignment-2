@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="contact" content="form">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/form.css" />
+</head>
+<header>
+    <nav>
+      <a href="index.html" id="Top"><img src="image/logo.PNG"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="AimTraining.html">Aim Training</a></li>
+          <li><a href="GameSense.html">Game Sense</a></li>
+        </ul>
+      </div>
+    </nav>
+</header>
+<form id="form" action="mailto:tnguy341@mtroyal.ca" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <br/>
+            <div>     
+                <label for="gender">Gender:</label>   
+                <dd>
+                    <input type="radio" name="gender" id="Male" value="Male">
+                    <label for="Male">Male</label>
+                    <input type="radio" name="gender" id="Female" value="Female">
+                    <label for="Female">Female</label>
+                </dd>
+            </div>
+            <br/>
+            <div>
+                <label for="name">Name*</label>
+                <dd>
+                    <input type="text" size="12" maxlength="32" pattern="[A-Za-z]{1,32}" name="name" id="name" placeholder="First" required/>
+                    <input type="text" size="12" maxlength="32" pattern="[A-Za-z]{1,32}" name="name" id="name" placeholder="Last" required/>
+                </dd>
+            </div>
+            <br/>
+            <div>
+                <label for="email">Email*</label>
+                <dd>
+                    <input type="email" size="30" name="email" id="email" placeholder="name@email.ca" required>
+                    <br/>
+                </dd>
+            </div>
+            <br/>
+            <div>
+                <label for="phone">Phone</label>
+                <dd>
+                    <input type="tel" size="30" name="phone" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </dd>
+            </div>
+            <br/>
+            <br/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Reason</legend>
+            <br/>
+            <div>
+                <dt>Feedback</dt>
+                <dd>
+                    <input type="checkbox" name="satisifed" id="satisfied">
+                    <label for="hotel">Satisifed</label>
+                    <input type="checkbox" name="unsatisfied" id="unsatisfied">
+                    <label for="car">Unsatisfied</label>
+                </dd>
+            </div>
+            <br/>
+            <div>
+                <label for="date">Date of Form:</label>
+                <dd>
+                    <input type="date" name="date" id="date" min="2023-02-08">
+                </dd>
+            </div>
+            <br/>
+            <div>
+                <label for="subject">Subject*</label>
+                <dd>
+                    <input type="text" size="12" maxlength="32" pattern="[A-Za-z]{1,32}" name="subject" id="subject" placeholder="Subject" required/>
+                </dd>
+            </div>
+            <br/>
+            <div>
+                <label for="inquiry">Inquiry:</label>
+                <dd>
+                    <textarea id="inquiry" name="inquiry" cols="40" placeholder="What did you want to talk about?" required></textarea>
+                </dd>
+            </div>
+            <br/>
+        </fieldset>
+        <br/>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
