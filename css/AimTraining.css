@@ -1,10 +1,17 @@
 *{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+title {
+  visibility: hidden;
+}
 nav {
+  flex-direction: row;
   display: flex;
   padding: 2% 6%;
   justify-content: space-between;
@@ -95,4 +102,76 @@ footer {
   position: relative;
   bottom: 0;
   left: 0;
+}
+
+/* Small devices */
+@media screen and (max-width: 590px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Medium devices */
+@media screen and (min-width: 591px) and (max-width: 790px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1rem;
+  }
+  
+  .col {
+    background-color: #ccc;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+/* Large devices */
+@media screen and (min-width: 791px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    max-width: 790px;
+    margin: 0 auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1rem;
+  }
+  
+  .col {
+    background-color: #ccc;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 1rem;
+  }
 }

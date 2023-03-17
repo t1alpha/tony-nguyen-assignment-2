@@ -1,12 +1,20 @@
 *{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
   margin: 0;
   padding: 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+title {
+  visibility: hidden;
+}
 nav {
   display: flex;
   padding: 2% 6%;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -57,7 +65,13 @@ nav img {
   font-size: 20;
   color: black;
 }
-
+.intro {
+  width: 90px;
+  color: black;
+  position: absolute;
+  top: 45%;
+  left: 30%;
+}
 .description {
   width: 90px;
   color: black;
@@ -93,23 +107,45 @@ figure img {
   width: 150px;
 }
 
-figure {
-  float: right;
-  padding: 150px;
-}
-
-.table {
-  margin-top: 100px;
-  margin-left: 670px;
-  padding-top: 150px;
-}
-
-.table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
 
 footer {
   position: relative;
   bottom: 0;
   left: 0;
+}
+/* Small devices */
+@media screen and (max-width: 590px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Medium devices */
+@media screen and (min-width: 591px) and (max-width: 790px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+/* Large devices */
+@media screen and (min-width: 791px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    max-width: 790px;
+    margin: 0 auto;
+  }
+  
+  
+  main {
+    flex-grow: 1;
+    padding: 1rem;
+  }
 }
